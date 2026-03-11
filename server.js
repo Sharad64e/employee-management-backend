@@ -16,6 +16,9 @@ app.use("/employees", employeeRoutes);
 
 app.use(errorHandler);
 
+app.get("/", (req, res) => {
+  res.send("Employee Management Backend API is running 🚀");
+});
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
